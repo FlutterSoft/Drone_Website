@@ -1,0 +1,206 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+
+
+
+/******************************************
+/* STYLE
+/*******************************************/
+
+:root{
+  --primary: #FFFAEC;
+  --secondary: #3F51DC;
+  --white: #FFFFFF;
+  --black:  #000000;
+  --grey:  rgba(0,0,0,0.8);
+
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+
+}
+body{
+  background-color: var(--primary);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+
+h2{
+  font-weight: 500;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  padding: 0 30px;
+  text-align: center;
+}
+
+#menuLogo, #cart, #menuToggler{
+  flex-basis: 25%;
+}
+
+#menuToggler{
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--grey);
+  font-weight: 500;
+
+}
+nav a:hover{
+  color: var(--secondary);
+  opacity: 70%;
+}
+
+.active{
+  color: var(--secondary);
+}
+.black{
+  color: var(--black)
+}
+.grey{
+  color: var(--grey)
+}
+.white{
+  color: var(--white)
+}
+
+.blue{
+  color: var(--secondary);
+}
+
+header, main {
+  max-width: 1800px;
+  width: 100%;
+
+}
+
+
+.mobileNav {
+  position: fixed;
+  top: 60px;
+  left: 100%;
+  width: 100%;
+  min-height: 100vw;
+  display: block;
+  z-index: 98;
+  padding-top: 40px;
+  transition: 400ms ease;
+}
+
+.mobileNav a {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    max-height: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    color: var(--light);
+    text-decoration: none;
+}
+.mobileNav.isActive{
+  left: 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+#heroSection{
+  display: flex;
+  margin: 50px;
+  padding: 50px 120px;
+  max-width: 1600px;
+  align-items: center;
+  margin: auto;
+}
+
+
+#heroLeft{
+  padding: 0 50px;
+  width: 100%;
+}
+#heroRight{
+  width: 100%;
+}
+/* #heroRight{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+} */
+
+@media (max-width: 1024px) {
+  .navLinks{
+    display: none;
+  }
+  #menu{
+    justify-content: space-between;
+  }
+  #menuToggler{
+    display: block;
+  }
+  #cart{
+    order: -1;
+
+  }
+}
+
+.btnRect{
+  background-color: var(--secondary);
+  border-radius: 12px;
+  color: var(--white);
+  height: 6rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border: 0;
+  padding: 15px;
+  box-shadow: 2px 1px 5px var(--grey);
+  cursor:pointer;
+}
+
+.btnRect:active{
+  box-shadow: 1px 0 1px var(--grey);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.smFont {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 3.9rem;
+  padding: 0;
+  margin: 25px 0;
+}
+
+p{
+  font-weight: 400;
+  font-size: 2rem;
+}
