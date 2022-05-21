@@ -43,13 +43,24 @@ h2{
   font-weight: 500;
 }
 
-nav ul {
+#menu {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items:center;
   list-style: none;
   padding: 0 30px;
+  margin: 0;
   text-align: center;
+}
+
+.navLinks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navLinks img{
+  width: 40%;
+  margin-bottom: 5px;
 }
 
 #menuLogo, #cart, #menuToggler{
@@ -91,6 +102,7 @@ nav a:hover{
 header, main {
   max-width: 1800px;
   width: 100%;
+  background-color: var(--primary);
 
 }
 
@@ -110,6 +122,7 @@ header, main {
   bottom: 0%;
   top: 70px;
   transition: ease 400ms;
+  
 }
 .mobileNav a {
     display: block;
@@ -139,6 +152,29 @@ img{
   margin: auto;
 }
 
+.headingSection{
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  margin: 50px;
+  padding: 50px 60px;
+  max-width: 1600px;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border-top: white 2px solid;
+  min-height: 500px;
+}
+
+.headingSection > h2{
+  border-bottom: 2px solid var(--secondary);
+  font-weight: 500;
+  font-size: 3rem;
+  border-radius: 1px;
+  width: 20rem;
+  margin: auto;
+  padding-bottom: 15px;
+}
 
 #heroLeft{
   padding: 0 50px;
@@ -156,12 +192,26 @@ img{
   margin: auto;
 } */
 
+footer{
+  margin: auto;
+  padding: 60px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--secondary);
+}
 @media (max-width: 1024px) {
   .navLinks{
     display: none;
   }
   #menu{
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary);
+
   }
   #menuToggler{
     display: block;
@@ -171,11 +221,13 @@ img{
   }
   #heroSection{
     grid-template-columns: auto;
-    padding: 50px 20px;
+    padding: 0px 20px;
+    margin-top: 100px;
   }
   /* #heroLeft{
     text-align: center;
   } */
+  
 }
 
 .btnRect{
@@ -192,15 +244,82 @@ img{
   cursor:pointer;
 }
 
+.btnRect:hover {
+  transition: all 100ms;
+  box-shadow: 1.8px 1px 3px var(--grey);
+
+}
+
 .btnRect:active{
   box-shadow: 1px 0 1px var(--grey);
+  transform: scale(0.98);
+  transition: all 50ms;
+
 }
+
+
+
+/* .btnCircle{
+  background-color: var(--secondary);
+  border-radius: 50%;
+  color: var(--white);
+  width: 63px;
+  height: 63px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border: 0;
+  padding: 15px;
+  cursor:pointer;
+  margin: 0 20px;
+} */
+
+.btnCircleOuter {
+  margin: 20px;
+  width: 65px;
+  height: 65px;
+  background-color: var(--secondary);
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 2px 1px 5px var(--grey);
+  border: none;
+}
+
+.btnCircleInner {
+  margin: 0 auto;
+  top: 0%;
+  left:8%;
+  position: relative;  
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 18px;
+  border-radius: 3px;
+  border-color: transparent transparent transparent var(--primary);
+}
+
+.btnCircleOuter:hover {
+  transform: scale(0.98);
+  transition: all 100ms;
+}
+
+.btnCircleOuter:active {
+  box-shadow: 1px 0 1px var(--grey);
+  transform: scale(0.95);
+  transition: all 50ms;
+}
+
 
 .container {
   display: flex;
   align-items: center;
 }
+.feature{
+  display: flex;
+  align-items: center;
+  margin: 50px auto;
 
+}
 .smFont {
   font-weight: 400;
   font-size: 1.5rem;
