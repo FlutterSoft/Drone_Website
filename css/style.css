@@ -51,7 +51,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .container {
@@ -140,9 +140,10 @@
     min-height: 100vh;
     display: block;
     z-index: 98;
-    padding-top: 40px;
+    margin-top: 6rem;
     transition: 400ms ease;
     background-color: var(--primary);
+    font-size: 4rem;
   }
   .mobileNav.isActive{
     bottom: 0%;
@@ -196,7 +197,7 @@
     min-height: 500px;
   }
 
-  .headingSection > h2{
+  .headingSection h2{
     border-bottom: 2px solid var(--secondary);
     font-weight: 500;
     font-size: 3rem;
@@ -252,20 +253,54 @@
     #menuToggler{
       display: block;
     }
+    #menuToggler img{
+      width: 40px;
+    }
     #cart{
       order: -1;
     }
+    #cart img{
+      width: 40px;
+    }
     #heroSection{
       grid-template-columns: auto;
-      padding: 0px 20px;
+      padding: 40px 20px;
       margin-top: 100px;
     }
 
     #heroRight img{
       width: 70%;
     }
+
+    h2{
+      font-size: 4rem;
+    }
+    .headingSection h2{
+      font-size: 4rem;
+      width: 80%;
+    }
     
+    h3{
+      font-size: 6rem;
+    }
+    h6{
+      font-size: 15rem;
+    }
+    p{
+      font-size: 3.5rem;
+    }
+    #heroLeft .container span{
+      font-size: 2rem;
+    }
+    .feature{
+      font-size: 3rem;
+    }
+    
+
   }
+
+
+
 
 
 /* BUTTONS */
